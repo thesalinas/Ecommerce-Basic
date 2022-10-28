@@ -1,0 +1,74 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.details{
+    padding: 24px;
+    &--company{
+        color: v.$Red;
+        text-transform: uppercase;
+        font-size: 0.8em ;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+    }
+    &--title{
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+    &--description{
+        font-size: 0.94em;
+        color: v.$Dark-grayish-blue;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    &--prices{
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        align-items: center;        
+    }
+    &--now{
+        font-size: 1.8em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+    }
+    &--discount{
+        font-size: 0.5em;
+        background-color: v.$Pale-orange;
+        color: v.$Red;
+        padding: 4px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    &--before{
+        font-weight: 700;
+        color: v.$Dark-grayish-blue;
+        text-decoration: line-through;
+    } 
+    &--button{
+     @include m.button;
+    }   
+    @media(min-width: 1115px){
+        width: 446px;
+        padding-top: 60px;
+        &--title{
+            font-size: 2.4em;
+            margin-bottom: 48px;
+        }
+        &--description{
+            font-size: 0.8em;
+            margin-bottom: 37px;
+        }
+        &--prices{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &--product--quantity{
+            display: flex;
+            gap:32px
+        }
+    }
+}

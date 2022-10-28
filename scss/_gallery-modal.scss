@@ -1,0 +1,52 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.modal-gallery {
+    width: 446px;
+  &--background {
+    @include m.modal-background;
+    display: none;
+    place-content: center;
+  }
+  &--close-container{
+    text-align: right;
+    height: 30px;
+  }
+  &--close {
+    width: 16px;
+    &:hover{
+        cursor: pointer;
+        content: url("../images/icon-closeRed.svg");
+    }
+    
+  }
+  &--image-container {
+    background-image: url("../images/image-product-1.jpg");
+    height: 446px;
+    background-size: cover;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  &--thumbnails {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: auto;
+  }
+  &--thumbnail {
+    width: 90px;
+    border-radius: 16px;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid v.$Red;
+    }
+  }
+  &--image-previus{
+    @include m.image-btn(180px, -10px, true);
+  }
+  &--image-next{
+    @include m.image-btn(180px, 430px, true);
+  }
+  
+}

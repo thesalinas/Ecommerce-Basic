@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="./main.js"></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <div class="header--navigation">
+          <img class="header--menu" src="./images/icon-menu.svg" alt="menu icon" />
+          <h2 class="header--name">SalinasShore</h2>
+          <nav class="navbar">
+            <ul class="navbar--items">
+              <li><a href="#" class="navbar--link">Collections</a></li>
+              <li><a href="#" class="navbar--link">Men</a></li>
+              <li><a href="#" class="navbar--link">Women</a></li>
+              <li><a href="#" class="navbar--link">About</a></li>
+              <li><a href="#" class="navbar--link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>    
+        <!--Inicio modal navbar-->
+        <div class="modal-navbar--background">
+          <nav class="modal-navbar">
+            <img
+              class="modal-navbar--close"
+              src="./images/icon-close.svg"
+              alt=""
+            />
+            <ul class="modal-navbar--items">
+              <li><a href="#" class="modal-navbar--link">Collections</a></li>
+              <li><a href="#" class="modal-navbar--link">Men</a></li>
+              <li><a href="#" class="modal-navbar--link">Women</a></li>
+              <li><a href="#" class="modal-navbar--link">About</a></li>
+              <li><a href="#" class="modal-navbar--link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--Final modal navbar-->
+        <div class="header--cart-avatar">
+          <div class="header--cart">
+            <div class="header--cart--notification">0</div>
+            <img src="./images/icon-cart.svg" alt="" />
+          </div>
+          <img class="header--avatar" src="./images/image-avatar.png" alt="" />
+        </div>
+      </header>
+
+      <section class="content">
+        <article class="gallery">
+          <div class="gallery--image-container">
+            <img
+              class="gallery--previus"
+              src="./images/icon-previous.svg"
+              alt="Previus"
+            />
+            <img
+              class="gallery--next"
+              src="./images/icon-next.svg"
+              alt="next"
+            />
+          </div>
+
+          <div class="gallery--thumbnails">
+            <img
+              id="1"
+              class="gallery--thumbnail"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="2"
+              class="gallery--thumbnail"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="3"
+              class="gallery--thumbnail"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="4"
+              class="gallery--thumbnail"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="thumbnail"
+            />
+          </div>
+        </article>
+
+        <article class="details">
+          <h2 class="details--company">Sneaker Company</h2>
+          <h2 class="details--title">Fall Limited Edition Sneakers</h2>
+          <p class="details--description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="details--prices">
+            <p class="details--now">
+              $125.000 <span class="details--discount">50%</span>
+            </p>
+            <p class="details--before">$250.000</p>
+          </div>
+          <div class="details--product--quantity">
+            <div class="input">
+              <img
+                class="input--minus"
+                src="./images/icon-minus.svg"
+                alt="minus"
+              />
+              <input class="input--number" type="text" value="0" readonly/>
+              <img class="input--plus" src="./images/icon-plus.svg" alt="plus" />
+            </div>
+            <button class="details--button">
+              <img src="./images/icon-cartWhite.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!--Inicio cart modal-->
+      <div class="cart-modal">
+        <p class="cart-modal--title">Cart</p>
+        <div class="cart-modal--checkout-container">
+          <div class="cart-modal--details-container">
+            <img class="cart-modal--image-product"
+            src="./images/image-product-1-thumbnail.jpg" alt="">
+            <div>
+              <p class="cart-modal--product">Autumn Limited Edtion..</p>
+              <p class="cart-modal--price">$125.000 x 3 <span>$375.000</span></p>
+            </div>
+            <img
+              class="cart-modal--delete"
+              src="./images/icon-delete.svg"
+              alt="delete"
+            />
+          </div>
+          <button class="cart-modal--checkout">Checkout</button>
+        </div>
+      </div>
+      <!--Final cart modal-->
+
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Juan David Salinas</a>.
+    </footer>
+     <!--Inicio gallery modal-->
+     <div class="modal-gallery--background">
+      <article class="modal-gallery">
+        <div class="modal-gallery--close-container">
+        <img src="./images/icon-close.svg" alt="" class="modal-gallery--close">
+      </div>
+        <div class="modal-gallery--image-container">
+          <img
+            class="modal-gallery--image-previus"
+            src="./images/icon-previous.svg"
+            alt="Previus"
+          />
+          <img
+            class="modal-gallery--image-next"
+            src="./images/icon-next.svg"
+            alt="next"
+          />
+        </div>
+        <div class="modal-gallery--thumbnails">
+          <img
+            id="m1"
+            class="modal-gallery--thumbnail"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="m2"
+            class="modal-gallery--thumbnail"
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="m3"
+            class="modal-gallery--thumbnail"
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="m4"
+            class="modal-gallery--thumbnail"
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+          />
+        </div>
+      </article>
+    </div>
+    <!--final gallery modal-->
+  </body>
+</html>

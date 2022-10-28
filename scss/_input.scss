@@ -1,0 +1,26 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.input{ 
+ height: 57px;
+ display: flex;
+justify-content: space-between;
+ &--minus{
+    @include m.ChangeNumber(25px, 5px);
+    
+ }
+ &--number{
+    width: 100%;
+    border: none;
+    background-color: v.$Light-grayish-blue;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: v.$font;
+    outline: none;
+ }
+ &--plus{
+    @include m.ChangeNumber(20px, 3px);
+    
+ }
+}
